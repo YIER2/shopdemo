@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <title>慢慢买</title>
+
+    <!--清除默认样式文件-->
+    <link rel="stylesheet/less"  href="./css/base.less">
+    <!-- 主页面样式文件 -->
+    <link rel="stylesheet/less"  href="./css/index.less">
+    <!--编译less文件的js-->
+    <script src="./js/less.js"></script>
+    <!-- jquery -->
+    <script src="./js/jquery.js"></script>
+    <!-- 首页js -->
+    <script src="./js/index.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <div class="top clearfix">
+        <div class="t_content">
+            <div class="left">
+            <a href="javascript:;">
+                <img src="images/header_logo.png" alt="">
+            </a>
+            </div>
+            <div class="right">
+            <a href="javascript:;">
+                <img src="images/header_app.png" alt="">
+            </a>
+            </div>
+        </div>
+    </div>
+    <!-- 搜索框 -->
+    <div class="search clearfix">
+        <form action="index_submit" method="get" accept-charset="utf-8" id="form">
+            <input type="text" id="search" placeholder="请输入要比价的商品">
+            <input type="button" value="搜索" id="bt" />
+        </form>
+    </div>
+    <!-- 导航 -->
+    <nav class="nav clearfix" id='nav'>
+       <!--  <ul>
+            <li><a href="#"></a>
+                <img src="images/ic_bcj.png" alt=""><h3>比价搜索</h3>
+            </li>
+        </ul> -->
+    </nav>
+
+    <!-- 折扣推荐 -->
+    <div class="product">
+        <div class="p_top">
+            <h3>超值折扣推荐</h3>
+            <a href="#"><img src="images/header_app.png" alt=""></a>
+        </div>
+        <div class="p_content clearfix" id="p_content">
+            <!-- <div class="p_product clearfix">
+                <a href="#">
+                    <img src="./images/201610001351578684.jpg" alt="">
+                </a>
+                <div class="p_p_desc clearfix">
+                    <h3>移动端凑单品：海天 鲜味 生抽 1.28L</h3>
+                    <p class="price clearfix">
+                        10.9元
+                    </p>
+                    <span>京东商城</span><span>&nbsp;|&nbsp;</span><span>10-25 14：10</span>
+                    <p class="message"><img src="./lib/comment.svg" alt=""><span>1</span> </p>
+                </div>
+            </div> -->
+        </div>
+        <div class="p_bottom">
+            <a href="#">更多优惠信息》</a>
+        </div>
+    </div>
+
+    <!-- 品牌排行 -->
+    <div class="plist">
+        <h3>品牌排行</h3>
+        <div class="pl_right">
+            <a href="#"><img src="images/header_app.png" ></a>
+        </div>
+    </div>
+    <!-- 登录 -->
+    <div class="loginBox clearfix">
+        <div class="login"><a href="#">登录</a></div>
+        <div class="signIn"><a href="#">注册</a></div>
+        <div class="toTop"><a href="#"><img src="images/top.jpg" alt="" class="b_top" />返回顶部</a></div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+        <p class="f_top"><a href="#" class="down">手机APP下载</a> 慢慢买手机版 -- 掌上比价平台        </p>
+        <p class="net">m.manmanbuy.com</p>
+    </div>
+
+
+</body>
+<!-- 模板 js-->
+<script src="js/template.js"></script>
+<script type="text/html" id="menu">
+    <ul>
+        {{each result as value i}}
+        <li>
+            <a href="{{value.titlehref}}">
+                {{#value.img}}
+                <h3>{{value.name}}</h3>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<script type="text/html" id="productList">
+    {{each result as value}}
+     <div class="p_product clearfix">
+                <a href="#">
+                    {{#value.productImgSm}}
+                </a>
+                <div class="p_p_desc clearfix">
+                    <h3>{{value.productName}}</h3>
+                    <p class="price clearfix">
+                        {{value.productPinkage}}
+                    </p>
+                    <span>{{value.productFrom}}</span><span>&nbsp;|&nbsp;</span><span>{{value.productTime}}</span>
+                    <p class="message"><img src="./lib/comment.svg" alt=""><span>{{value.productComCount.replace("有","").replace('人评论',"")}}</span> </p>
+                </div>
+            </div>
+    {{/each}}
+</script>
+</html>

@@ -1,0 +1,212 @@
+/*
+* @Author: Marte
+* @Date:   2017-07-16 11:44:07
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-07-16 11:44:07
+*/
+/* 头部样式 */
+body {
+  background-color: #f5f5f5;
+}
+.top {
+  box-sizing: border-box;
+  background-color: #ff841d;
+}
+.top .t_content {
+  padding: 10px;
+  height: 25px;
+}
+.top .t_content .left {
+  float: left;
+}
+.top .t_content .left img {
+  width: 185px;
+  height: 25px;
+}
+.top .t_content .right {
+  float: right;
+}
+.top .t_content .right img {
+  width: 34px;
+}
+/* 搜索框 */
+.search {
+  padding: 10px;
+  background-color: white;
+}
+.search #form {
+  padding-right: 70px;
+  position: relative;
+}
+.search #form #search {
+  width: 100%;
+  height: 30px;
+  float: left;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+.search #form #bt {
+  width: 58px;
+  height: 30px;
+  float: right;
+  border: 0;
+  border-radius: 15px;
+  position: absolute;
+  top: 0px;
+  right: 6px;
+  background-color: #ff841d;
+  color: white;
+}
+/* 导航栏 */
+.nav {
+  background-color: white;
+  margin-top: 10px;
+}
+.nav ul li:nth-last-child(-n+4) {
+  display: none;
+}
+.nav ul li {
+  width: 25%;
+  display: inline-block;
+  float: left;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.nav ul li img {
+  width: 50px;
+}
+.nav ul li h3 {
+  font: 400 12px '微软雅黑';
+}
+/* 超值推荐 */
+.product {
+  margin-top: 10px;
+  background-color: white;
+}
+.product .p_top {
+  height: 35px;
+  background-color: #ff9000;
+}
+.product .p_top h3 {
+  float: left;
+  font: 500 16px '微软雅黑';
+  line-height: 35px;
+  padding-left: 10px;
+  color: white;
+}
+.product .p_top a {
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.product .p_top a img {
+  width: 20px;
+}
+.product .p_content {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.product .p_content .p_product {
+  position: relative;
+  height: 100px;
+}
+.product .p_content .p_product a img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.product .p_content .p_product .p_p_desc {
+  width: 100%;
+  padding-left: 110px;
+  padding-top: 15px;
+}
+.product .p_content .p_product .p_p_desc h3 {
+  font: 500 14px '微软雅黑';
+}
+.product .p_content .p_product .p_p_desc .price {
+  color: red;
+  margin: 5px 0 5px 0;
+}
+.product .p_content .p_product .p_p_desc span {
+  font: 400 12px '微软雅黑';
+  color: #666;
+}
+.product .p_content .p_product .p_p_desc .message {
+  float: right;
+  line-height: 100%;
+}
+.product .p_content .p_product .p_p_desc .message img {
+  width: 14px;
+  height: 15px;
+  float: left;
+  margin-right: 10px;
+  margin-top: 3px;
+}
+.product .p_bottom {
+  text-align: center;
+  height: 32px;
+  border: 1px solid #666;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+.product .p_bottom a {
+  color: black;
+  font: 400 14px '微软雅黑';
+  line-height: 32px;
+}
+/* 品牌排行 */
+.plist {
+  height: 35px;
+  background-color: #ff9000;
+  margin: 10px 0;
+}
+.plist h3 {
+  font: 500 16px '微软雅黑';
+  line-height: 35px;
+  color: white;
+  margin-left: 10px;
+  float: left;
+}
+.plist .pl_right {
+  float: right;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+.plist .pl_right a img {
+  width: 20px;
+  height: 20px;
+}
+/* 登录 */
+.loginBox {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: white;
+}
+.loginBox .login,
+.loginBox .signIn,
+.loginBox .toTop {
+  width: 33.33%;
+  height: 30px;
+  float: left;
+  text-align: center;
+  line-height: 30px;
+}
+.loginBox .toTop .b_top {
+  width: 15px;
+  height: 15px;
+}
+/* 底部 */
+.footer .f_top {
+  text-align: center;
+}
+.footer .f_top .down {
+  color: red;
+}
+.footer .net {
+  text-align: center;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <title>商品详情页面</title>
+    <!-- 初始化css -->
+    <link rel="stylesheet/less" href="css/base.less">
+    <!-- 本页面css的引入 -->
+    <link rel="stylesheet/less" href="css/bijia.less">
+    <!-- less解析的js -->
+    <script src="js/less.js"></script>
+</head>
+<body>
+    <!-- 头部 -->
+    <header id="header" class="header clearfix">
+        <!--头部-->
+        <div class="top clearfix">
+            <a href="./index.html" class="logo">
+                <img src="images/header_logo.png" alt="" />
+            </a>
+            <a href="#" class="down">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+        <!--搜索框-->
+        <div class="search">
+            <form action="search_submit" method="get" accept-charset="utf-8" class="clearfix">
+                <input type="search" class="textInput" placeholder="请输入内容"/>
+                <input type="button" value="搜索" class="seachInput" />
+            </form>
+        </div>
+    </header>
+    <!-- 导航 -->
+    <nav class="nav">
+        <span><a href="index.html">首页</a> > </span>
+        <span><a href="category.html" class="categotyID">全部分类</a> > </span>
+        <span class="productidID">我出不来了</span> >
+        <div class="selectButton">筛选</div>
+    </nav>
+    <!-- 产品展示 -->
+    <div class="productInfo clearfix">
+
+    </div>
+
+    <!-- 用户评论 -->
+    <div class="commentBox">
+        <h3>用户评价</h3>
+        <div class="comment">
+            <!-- <div class="c_top clearfix">
+                <span>yongege</span>
+                <span>01/05/2017</span><br>
+                <span>购买自:一号店</span>
+            </div>
+            <p>什么乱七八糟的东西啊什么乱七八糟的东西啊什么乱七八糟的东西啊什么乱七八糟的东西啊什么乱七八糟的东西啊什么乱七八糟的东西啊什么乱七八糟的东西啊什么乱七八糟的东西啊什么乱七八糟的东西啊什么乱七八糟的东西啊什么乱七八糟的东西啊</p>
+         -->
+         </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="more">
+            <a href="javascript:;">点点吧!来嘛</a>
+        </div>
+        <div class="loginBox">
+            <div class="login"><a href="#">登录</a></div>
+            <div class="sign"><a href="#">注册</a></div>
+            <div class="toTop"><a href="#"><img src="images/top.jpg" alt="">返回顶部</a></div>
+        </div>
+        <p class="f_bottom">
+            <span class="appDown"><a href="#">手机APP下载</a></span>
+            <span class="appM"><a href="#">慢慢买手机版 -- 掌上比价平台</a></span>
+        </p>
+        <p class="net"> <a href="#">m.manmanbuy.com </a></p>
+    </footer>
+</body>
+<script src="js/jquery.js"></script>
+<!-- 本页面js文件 -->
+<script src="js/bijia.js"></script>
+<script src="js/template.js"></script>
+<!-- 商品信息模板 -->
+<script type="text/html" id="tvId">
+    {{each result as value}}
+    <h3>{{value.productName}}</h3>
+    {{#value.productImg}}
+    <span class="save">
+        <a href="javascript:;">
+            <img src="images/sc.jpg" >
+        </a>
+    </span>
+    <ul class="clearfix">
+        <li><a href="javascript:;">比价购买</a></li>
+        <li><a href="javascript:;">产品参数</a></li>
+        <li><a href="javascript:;">评价()2232</a></li>
+    </ul>
+    <div class="bijiabox clearfix">
+        <!-- <span>一号店</span>
+        <span>京东商城 去购买</span> -->
+        {{#value.bjShop}}
+    </div>
+    <p class="hints">
+        * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+    </p>
+    {{/each}}
+</script>
+
+<!-- 用户评论 -->
+<script type="text/html" id="commentAA">
+    {{each result as value}}
+        <div class="c_top clearfix">
+            <span>{{value.comName}}</span>
+            <span>{{value.comTime}}</span><br>
+            <span>{{value.comFrom}}</span>
+        </div>
+        <p>{{value.comContent}}</p>
+
+    {{/each}}
+</script>
+</html>

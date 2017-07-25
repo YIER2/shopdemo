@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>国内折扣</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet/less" href="./css/base.less">
+    <link rel="stylesheet/less" href="./css/inlanddiscount.less">
+    <script src="./js/less.js"></script>
+</head>
+<body>
+<header id="header" class="header clearfix">
+    <a href="./index.html" class="back"></a>
+    <h2>国内折扣</h2>
+    <a href="javascript:;" class="down"></a>
+</header>
+<!-- 产品列表 -->
+<div class="productList ">
+    <ul class="list clearfix">
+        <!-- <li>
+            <a href="#" class="clearfix">
+                <img src="./images/guo.jpg" alt="" />
+            </a>
+            <h2>锅锅 锅锅锅锅锅锅 我是一直锅锅 锅锅锅锅锅锅锅锅锅</h2>
+            <p class="price">19.8元(5件99元)</p>
+            <p>京东商城 | 10-22 13:28</p>
+        </li> -->
+
+    </ul>
+</div>
+<footer>
+    <ul class="clearfix">
+        <li><a href="javascript:;">登录</a></li>
+        <li><a href="javascript:;">注册</a></li>
+        <li><a href="javascript:;">返回顶部</a></li>
+    </ul>
+    <p>
+        <span class="app">手机APP下载</span>
+        <span class="phone">慢慢买手机版</span>
+        <span class="bijia">--掌上比价平台</span>
+    </p>
+    <a href="http://m.manmanbuy.com" class="net">m.manmanbuy.com</p>
+</footer>
+</body>
+<script src="./js/jquery.js"></script>
+<script src="./js/template.js"></script>
+<script src="./js/inlanddiscount.js"></script>
+<script type="text/html" id="pList">
+    {{each result as value}}
+            <li >
+                <a href="discount.html?productid={{value.productId}}" >
+                    {{#value.productImg}}
+                </a>
+                <h2>
+                    <a href="discount.html?productid={{value.productId}}" >
+                        {{value.productName}}
+                    </a>
+                </h2>
+                <p class="price" >
+                    {{value.productPrice}}
+                </p>
+                <p>
+                    {{value.productFrom}} | {{value.productTime}}
+                </p>
+            </li>
+    {{/each}}
+</script>
+</html>

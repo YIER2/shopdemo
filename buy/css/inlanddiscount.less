@@ -1,0 +1,117 @@
+.header{
+    background-color: #ff841d;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    height: 44px;
+    .back{
+        width: 27px;
+        height: 27px;
+        padding: 5px;
+        position: absolute;
+        background-image: url('../images/icon_bar.png');
+        background-position: -103px -11px;
+        background-size: 220px 132px;
+        top: 12px;
+        left: 10px;
+    }
+    >h2{
+        line-height: 44px;
+        color:#fff;
+    }
+    .down{
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        background-image: url("../images/header_app.png");
+        background-size:32px;
+
+
+        top: 10px;
+        right: 10px;
+
+    }
+}
+/*产品列表*/
+.productList{
+    >ul{
+        >li{
+            width: 50%;
+            border-bottom: 1px solid #eee;
+            border-right: 1px solid #eee;
+            float: left;
+            padding: 10px;
+            >a{
+                text-align: center;
+                >img{
+                    width: 140px;
+                    height: 140px;
+                }
+            }
+            >h2{
+                font: 400 14px '微软雅黑';
+                height: 40px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            >.price{
+                color:red;
+                font: 400 12px '微软雅黑';
+                 display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            p{
+                color:#ccc;
+                font: 400 12px '微软雅黑';
+            }
+        }
+        >li:nth-child(even){
+            border-right: 0;
+        }
+    }
+}
+
+footer{
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+
+    >ul{
+        >li{
+            width: 33.333%;
+            border-top: 1px solid #666;
+            border-bottom: 1px solid #666;
+            border-right: 1px solid #666;
+            float: left;
+            text-align: center;
+        }
+        >li:last-child{
+            border-right: none;
+            position: absolute;
+
+            background: url('../images/top.jpg') no-repeat;
+            background-size: 16px;
+            right: 0;
+
+        }
+    }
+    >p{
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+        .app{
+            color:red;
+        }
+        .bijia{
+            color:#ccc;
+        }
+    }
+    >a{
+        font-size: 14px;
+
+    }
+}

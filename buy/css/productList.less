@@ -1,0 +1,188 @@
+/*头部*/
+.header{
+    background-color:#ff841d;
+    .top{
+        padding: 10px;
+        .logo{
+                float: left;
+            img{
+                width: 185px;
+                height: 25px;
+            }
+        }
+        .down{
+            float: right;
+            img{
+                width: 34px;
+                height: 34px;
+            }
+        }
+    }
+    .search{
+        padding: 10px;
+        background-color: #fff;
+        form{
+            padding-right: 70px;
+            position: relative;
+            .textInput{
+                width: 100%;
+                background-color: #f5f5f5;
+                height: 30px;
+                float: left;
+                border-radius: 15px;
+                padding-left: 15px;
+            }
+            .seachInput{
+                width: 63px;
+                height: 30px;
+                background-color: #ff841d;
+                border-radius: 15px;
+                float: right;
+                position: absolute;
+                top: 0;
+                right: 0;
+                color:white;
+            }
+        }
+    }
+}
+/*导航*/
+.nav{
+    padding: 8px 15px;
+    background-color:#f5f5f5;
+    position: relative;
+    font: 400 14px "微软雅黑";
+    .selectButton{
+        width: 54px;
+        height: 20px;
+        border: 1px solid #666;
+        border-radius:5px;
+        font: 400 14px "微软雅黑";
+        text-align: center;
+        line-height: 20px;
+        float: right;
+
+
+    }
+}
+/*产品列表*/
+.productList{
+
+    border-bottom:1px solid #666;
+    .product{
+        padding: 10px;
+        border-bottom: 1px solid #666;
+        .photo{
+            a{
+                img{
+                    width: 100px;
+                    height: 100px;
+                    float: left;
+                }
+            }
+        }
+        .info{
+            font: 400 14px "微软雅黑";
+            padding-top: 10px;
+            .price{
+                color: red;
+                margin-top: 10px;
+                margin-bottom: 10px;
+
+            }
+            span{
+                font: 400 12px "微软雅黑";
+                color: #666;
+            }
+        }
+    }
+}
+/*分页选项*/
+.paging{
+    margin: 10px;
+    position: relative;
+
+    .prv, .next{
+       width: 68px;
+       height: 30px;
+       border: 1px solid #666;
+       border-radius: 5px;
+       text-align: center;
+       line-height: 30px;
+        a{
+
+            line-height: 30px;
+        }
+    }
+    .prv{
+        float: left;
+    }
+    .list{
+        width: 68px;
+        height: 30px;
+        text-align: center;
+        margin: 0 auto;
+        select{
+            width: 68px;
+            height: 30px;
+            border:none;
+            outline:none;
+            border: 1px solid #666;
+            border-radius: 5px;
+        }
+    }
+    .next{
+        float: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+/*底部*/
+.footer{
+    .loginBox{
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        height: 30px;
+        .login, .sign, .toTop{
+            width: 33.3%;
+            height: 30px;
+            float: left;
+            text-align: center;
+            font: 400 14px "微软雅黑";
+            line-height: 30px;
+
+        }
+        .login, .sign{
+            border-right: 1px solid #ccc;
+        }
+        .toTop{
+            img{
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+    .f_bottom{
+        text-align: center;
+
+        .appDown{
+            a{
+                font: 400 12px "微软雅黑";
+                color:red;
+            }
+        }
+        .appM{
+            a{
+                font: 400 12px "微软雅黑";
+            }
+        }
+    }
+    .net{
+       text-align: center;
+       line-height: 1rem;
+            a{
+                font: 400 12px "微软雅黑";
+            }
+    }
+}

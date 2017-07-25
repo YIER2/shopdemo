@@ -1,0 +1,216 @@
+body {
+  background-color: #ccc;
+}
+/*头部*/
+.header {
+  background-color: #ff841d;
+}
+.header .top {
+  padding: 10px;
+  position: relative;
+}
+.header .top .logo {
+  float: left;
+}
+.header .top .logo img {
+  width: 185px;
+  height: 25px;
+}
+.header .top .down {
+  float: right;
+}
+.header .top .down img {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+.header .search {
+  padding: 10px;
+  background-color: #fff;
+}
+.header .search form {
+  padding-right: 70px;
+  position: relative;
+}
+.header .search form .textInput {
+  width: 100%;
+  background-color: #f5f5f5;
+  height: 30px;
+  float: left;
+  border-radius: 15px;
+  padding-left: 15px;
+}
+.header .search form .seachInput {
+  width: 63px;
+  height: 30px;
+  background-color: #ff841d;
+  border-radius: 15px;
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+}
+/*导航*/
+.nav {
+  padding: 8px 15px;
+  background-color: #f5f5f5;
+  position: relative;
+  font: 400 14px "微软雅黑";
+}
+.nav .selectButton {
+  width: 54px;
+  height: 20px;
+  border: 1px solid #666;
+  border-radius: 5px;
+  font: 400 14px "微软雅黑";
+  text-align: center;
+  line-height: 20px;
+  float: right;
+}
+/*产品展示*/
+.productInfo {
+  padding-top: 10px;
+  text-align: center;
+  position: relative;
+  background-color: #fff;
+}
+.productInfo .save a img {
+  width: 39px;
+  position: absolute;
+  right: 20px;
+  top: 150px;
+}
+.productInfo ul {
+  border-top: 1px solid #c14d00;
+  border-bottom: 1px solid #c14d00;
+  margin-top: 20px;
+  background-color: #fff;
+}
+.productInfo ul li {
+  width: 33.3333%;
+  height: 30px;
+  float: left;
+  border-right: 1px solid #c14d00;
+  text-align: center;
+  line-height: 30px;
+  background-color: #ffbb00;
+}
+.productInfo ul li a {
+  color: #fff;
+  font: 400 14px "微软雅黑";
+}
+.productInfo ul li:last-child {
+  border-right: none;
+}
+.productInfo .bijiabox {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #666;
+}
+.productInfo .bijiabox span {
+  height: 30px;
+  line-height: 30px;
+}
+.productInfo .bijiabox span:first-child {
+  float: left;
+}
+.productInfo .bijiabox span:last-child {
+  float: right;
+  background-color: red;
+  color: #fff;
+  border-radius: 5px;
+}
+.productInfo .hints {
+  padding: 10px;
+  font: 400 12px "微软雅黑";
+  color: #ccc;
+}
+/*用户评价*/
+.commentBox {
+  background-color: #fff;
+}
+.commentBox h3 {
+  background-color: #dbdbdb;
+  font: 500 14px/30px "微软雅黑";
+  text-align: center;
+  border-top: 1px solid #000;
+}
+.commentBox .comment {
+  padding: 10px;
+  border-bottom: 1px solid #000;
+}
+.commentBox .comment .c_top {
+  height: 50px;
+}
+.commentBox .comment .c_top span {
+  float: right;
+  color: #ccc;
+  font-size: 12px;
+}
+.commentBox .comment .c_top span:first-child {
+  float: left;
+}
+.commentBox .comment p {
+  font: 400 14px "微软雅黑";
+  text-indent: 35px;
+}
+/*底部*/
+.footer {
+  background-color: #fff;
+}
+.footer .more {
+  padding: 10px;
+  margin-top: 10px;
+}
+.footer .more a {
+  display: block;
+  width: 100%;
+  height: 32px;
+  font: 400 14px "微软雅黑";
+  border-radius: 5px;
+  text-align: center;
+  line-height: 32px;
+  border: 1px solid #000;
+}
+.footer .loginBox {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  height: 30px;
+}
+.footer .loginBox .login,
+.footer .loginBox .sign,
+.footer .loginBox .toTop {
+  width: 33.3%;
+  height: 30px;
+  float: left;
+  text-align: center;
+  font: 400 14px "微软雅黑";
+  line-height: 30px;
+}
+.footer .loginBox .login,
+.footer .loginBox .sign {
+  border-right: 1px solid #ccc;
+}
+.footer .loginBox .toTop img {
+  width: 14px;
+  height: 14px;
+}
+.footer .f_bottom {
+  text-align: center;
+}
+.footer .f_bottom .appDown a {
+  font: 400 12px "微软雅黑";
+  color: red;
+}
+.footer .f_bottom .appM a {
+  font: 400 12px "微软雅黑";
+}
+.footer .net {
+  text-align: center;
+  line-height: 1rem;
+}
+.footer .net a {
+  font: 400 12px "微软雅黑";
+}

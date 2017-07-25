@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>商品详情</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet/less" href="./css/base.less">
+    <link rel="stylesheet/less" href="./css/discount.less">
+    <script src="./js/less.js"></script>
+</head>
+<body>
+<header id="header" class="header clearfix">
+    <a href="./index.html" class="back"></a>
+    <h2>国内折扣</h2>
+    <a href="javascript:;" class="down"></a>
+</header>
+<div class="main">
+    <!-- <div class="proInfo">
+        <h3>枣枣枣枣枣枣枣枣</h3>
+        <div class="price">19.8元</div>
+        <p class="time">京东商城 10-22 13：28 chenjin/慢慢买</p>
+        <img class="stylea" src="./images/guo.jpg" >
+        <p class="info">便宜啦便宜啦便宜啦便宜啦便宜啦便宜啦便宜啦便宜啦便宜啦便宜啦便宜啦</p>
+        <img class="product" src="./images/guo.jpg" >
+        <input type="button" value="前往购买" />
+    </div>
+    <img src="./images/guo.jpg" alt="">
+    <div class="comment"></div> -->
+</div>
+
+<footer>
+    <ul class="clearfix">
+        <li><a href="javascript:;">登录</a></li>
+        <li><a href="javascript:;">注册</a></li>
+        <li><a href="javascript:;">返回顶部</a></li>
+    </ul>
+    <p>
+        <span class="app">手机APP下载</span>
+        <span class="phone">慢慢买手机版</span>
+        <span class="bijia">--掌上比价平台</span>
+    </p>
+    <a href="http://m.manmanbuy.com" class="net">m.manmanbuy.com</p>
+</footer>
+</body>
+<script src="./js/jquery.js"></script>
+<script src="./js/template.js"></script>
+<script src="./js/discount.js"></script>
+<script type="text/html" id="proInfo">
+    {{if result}}
+        {{each result as value }}
+            <div class="proInfo">
+                <h3>{{value.productName}}</h3>
+                <div class="price">{{value.productPrice}}</div>
+                <p class="time">
+                    {{value.productFrom}} {{value.productTime}} {{value.productTips}}
+                </p>
+                <img class="stylea" src="./images/guo.jpg">
+                <p class="info">{{value.productInfo}}</p>
+                {{#value.productImg}}
+                <input type="button" value="前往购买" />
+            </div>
+            <img src="./images/mmbweixin2 (1).png">
+            <div class="comment">
+                {{#value.productComment}}
+            </div>
+        {{/each}}
+    {{/if}}
+</script>
+</html>

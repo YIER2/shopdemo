@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!-- 手机端适配 -->
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <title>分类产品列表</title>
+    <!-- 初始化css -->
+    <link rel="stylesheet/less" href="css/base.less">
+    <!-- 本页面css的引入 -->
+    <link rel="stylesheet/less" href="css/productList.less">
+    <!-- less解析的js -->
+    <script src="js/less.js"></script>
+</head>
+<body>
+    <!-- 头部 -->
+    <header id="header" class="header clearfix">
+        <!--头部-->
+        <div class="top clearfix">
+            <a href="./index.html" class="logo">
+                <img src="images/header_logo.png" alt="" />
+            </a>
+            <a href="#" class="down">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+        <!--搜索框-->
+        <div class="search">
+            <form action="search_submit" method="get" accept-charset="utf-8" class="clearfix">
+                <input type="search" class="textInput" placeholder="请输入内容"/>
+                <input type="button" value="搜索" class="seachInput" />
+            </form>
+        </div>
+    </header>
+    <!-- 导航 -->
+    <nav class="nav">
+        <span><a href="index.html">首页</a> > </span>
+        <span><a href="category.html">全部分类</a> > </span>
+        <span class="tv"></span>
+        <div class="selectButton">筛选</div>
+    </nav>
+    <!-- 商品列表 -->
+    <main class="productList clearfix">
+        <!-- <div class="product clearfix">
+            <div class="photo">
+                <a href="#"><img src="images/201610001351578684.jpg" alt=""></a>
+            </div>
+            <div class="info">
+                <p>乐视tv</p>
+                <p class="price">￥1999.00</p>
+                <span>
+                    报价(6) &nbsp;&nbsp;
+                    评价(3522)
+                </span>
+            </div>
+        </div> -->
+    </main>
+    <!-- 分页 -->
+    <div class="paging">
+        <div class="prv"><a href="#">上一页</a></div>
+        <div class="list">
+            <select onchange="window.location=this.value" >
+                <!-- <option>第一页</option> -->
+            </select>
+        </div>
+        <div class="next"><a href="#">下一页</a></div>
+    </div>
+    <footer class="footer">
+        <div class="loginBox">
+            <div class="login"><a href="#">登录</a></div>
+            <div class="sign"><a href="#">注册</a></div>
+            <div class="toTop"><a href="#"><img src="images/top.jpg" alt="">返回顶部</a></div>
+        </div>
+        <p class="f_bottom">
+            <span class="appDown"><a href="#">手机APP下载</a></span>
+            <span class="appM"><a href="#">慢慢买手机版 -- 掌上比价平台</a></span>
+        </p>
+        <p class="net"> <a href="#">m.manmanbuy.com </a></p>
+    </footer>
+</body>
+<script src="js/jquery.js"></script>
+<!-- 本页面js文件 -->
+<script src="js/productList.js"></script>
+<script src="js/template.js"></script>
+<!-- top横向导航模板 -->
+<script type="text/html" id="tvId">
+        {{each result as value}}
+            {{value.category+'>'}}
+        {{/each}}
+</script>
+<script type="text/html" id="productList">
+        {{each result as value}}
+            <div class="product clearfix">
+            <div class="photo">
+                <a href="#">{{#value.productImg}}</a>
+            </div>
+            <div class="info">
+                <p><a href="bijia.html?productid={{value.productId}}">{{value.productName}}</a></p>
+                <p class="price">{{value.productPrice}}</p>
+                <span>
+                    {{value.productQuote}} &nbsp;&nbsp;
+                    {{value.productCom}}
+                </span>
+            </div>
+        </div>
+        {{/each}}
+</script>
+</html>
